@@ -43,7 +43,7 @@ def addWorker(token, num):
     headers={"Authorization": "Bearer "+token}
     resp=requests.post(url,headers=headers, data=data)
     if resp.status_code==200:     
-      return "Done\n\n"+resp.content
+      return "Done\n\n"+str(resp.content)
     else:
       print(resp.content)
       return "Error\n"+resp.content.decode('utf-8') + '\n\n\n'+data
