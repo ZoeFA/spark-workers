@@ -9,12 +9,13 @@
     {
       "autoDelete": true,
       "boot": true,
-      "deviceName": "slave4",
+      "deviceName": "slave1000",
+      "diskEncryptionKey": {},
       "initializeParams": {
-        "diskSizeGb": "10",
-        "diskType": "projects/gold-virtue-400314/zones/us-west4-b/diskTypes/pd-balanced",
+        "diskSizeGb": "15",
+        "diskType": "projects/gold-virtue-400314/zones/europe-west1-b/diskTypes/pd-standard",
         "labels": {},
-        "sourceImage": "projects/ubuntu-os-cloud/global/images/ubuntu-2204-jammy-v20231201"
+        "sourceImage": "projects/ubuntu-os-cloud/global/images/ubuntu-2004-focal-v20231130"
       },
       "mode": "READ_WRITE",
       "type": "PERSISTENT"
@@ -24,8 +25,11 @@
     "enableDisplay": false
   },
   "guestAccelerators": [],
+  "instanceEncryptionKey": {},
   "keyRevocationActionType": "NONE",
-  "labels": {},
+  "labels": {
+    "goog-ec-src": "vm_add-rest"
+  },
   "machineType": "projects/gold-virtue-400314/zones/europe-west1-b/machineTypes/e2-medium",
   "metadata": {
     "items": [
@@ -35,7 +39,7 @@
       }
     ]
   },
-  "name": "slave4",
+  "name": "slave1000",
   "networkInterfaces": [
     {
       "accessConfigs": [
@@ -48,8 +52,8 @@
       "subnetwork": "projects/gold-virtue-400314/regions/europe-west1/subnetworks/default"
     }
   ],
-  "params":{
-    "resourceManagerTags":{}
+  "params": {
+    "resourceManagerTags": {}
   },
   "reservationAffinity": {
     "consumeReservationType": "ANY_RESERVATION"
@@ -62,7 +66,7 @@
   },
   "serviceAccounts": [
     {
-      "email": "569439294570-compute@developer.gserviceaccount.com",
+      "email": "995751200292-compute@developer.gserviceaccount.com",
       "scopes": [
         "https://www.googleapis.com/auth/devstorage.read_only",
         "https://www.googleapis.com/auth/logging.write",
